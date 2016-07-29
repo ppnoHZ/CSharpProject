@@ -13,43 +13,110 @@ using System.Windows.Forms;
 
 namespace rsc_win
 {
-	/// <summary>
-	/// Description of MainForm.
-	/// </summary>
-	public partial class MainForm : Form
-	{
-		public MainForm()
-		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
-			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
-		}
-		void MainFormLoad(object sender, EventArgs e)
-		{
-			linkLabel3.Text = "csdn Win 百度 谷歌 YAHOO";  
-			linkLabel3.Links.Add(0, 4, "http://www.csdn.net/");  
-			linkLabel3.Links.Add(9, 2, "http://www.baidu.com/");  
-			linkLabel3.Links.Add(12, 2, "http://www.google.cn/");  
-			linkLabel3.Links.Add(15, 5, "http://www.yahoo.com.cn/"); 
-//			System.Diagnostics.Process.Start("http://blog.csdn.net/testcs_dn"); 
-		}
-		void Button1Click(object sender, EventArgs e)
-		{
-//			linkLabel1.Links
-		}
-		void LinkLabel3LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-		{
-			linkLabel3.Links[linkLabel3.Links.IndexOf(e.Link)].Visited = true;  
-			string targetUrl = e.Link.LinkData as string;  
-			if (string.IsNullOrEmpty(targetUrl))
-				MessageBox.Show("没有链接地址！");
-			else
-				System.Diagnostics.Process.Start(targetUrl);  
-		}
-	}
+    /// <summary>
+    /// Description of MainForm.
+    /// </summary>
+    public partial class MainForm : Form
+    {
+        private string homeUrl = "";
+
+        public MainForm()
+        {
+            //
+            // The InitializeComponent() call is required for Windows Forms designer support.
+            //
+            InitializeComponent();
+
+            //
+            // TODO: Add constructor code after the InitializeComponent() call.
+            //
+        }
+        void MainFormLoad(object sender, EventArgs e)
+        {
+
+            init();
+
+        }
+
+
+
+        void LinkLabel3LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //         linkLabel3.Links[linkLabel3.Links.IndexOf(e.Link)].Visited = true;  
+            //string targetUrl = e.Link.LinkData as string;  
+            //if (string.IsNullOrEmpty(targetUrl))
+            //	MessageBox.Show("没有链接地址！");
+            //else
+            //	System.Diagnostics.Process.Start(targetUrl);  
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(homeUrl);
+        }
+        void Open(string url)
+        {
+            System.Diagnostics.Process.Start(url);
+
+        }
+
+        void init()
+        {
+            string[] ctr_types = new string[] { "pan_", "lab_", "pic_" };
+            string[] names = new string[] { "ie9", "qq", "firefox", "google" };
+
+            foreach (string sfirst in ctr_types)
+            {
+                foreach (string item in names)
+                {
+                    Control[] controls= this.Controls.Find(sfirst + item, true);
+                    if(controls.Length<=0)
+                    {
+                        continue;
+                    }
+                    Control find = controls[0];
+                    if (find != null)
+                    {
+                        string[] sconfigs = System.Configuration.ConfigurationManager.AppSettings[item].Split(',');
+
+                        if (sfirst == "lab_")
+                        {
+                            find.Text = sconfigs[0];
+                        }
+                        find.Tag = sconfigs;
+
+                        find.Click += new EventHandler((d, a) => System.Diagnostics.Process.Start(sconfigs[1]));
+
+                    }
+
+                }
+            }
+
+        }
+
+        private void pan_ie9_Paint(object sender, PaintEventArgs e)
+        {
+        }
+
+        private void pic_ie9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lab_ie9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+    
+        }
+
+        private void panel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            //MessageBox.Show("pan");
+
+        }
+    }
 }

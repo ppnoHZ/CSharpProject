@@ -14,8 +14,6 @@ namespace rsc_win
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.LinkLabel linkLabel3;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -33,42 +31,284 @@ namespace rsc_win
 		
 		private void InitializeComponent()
 		{
-			this.button1 = new System.Windows.Forms.Button();
-			this.linkLabel3 = new System.Windows.Forms.LinkLabel();
-			this.SuspendLayout();
-			// 
-			// button1
-			// 
-			this.button1.Location = new System.Drawing.Point(270, 85);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 58);
-			this.button1.TabIndex = 0;
-			this.button1.Text = "日升昌记";
-			this.button1.UseVisualStyleBackColor = true;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
-			// 
-			// linkLabel3
-			// 
-			this.linkLabel3.Location = new System.Drawing.Point(6, 209);
-			this.linkLabel3.Name = "linkLabel3";
-			this.linkLabel3.Size = new System.Drawing.Size(600, 23);
-			this.linkLabel3.TabIndex = 1;
-			this.linkLabel3.TabStop = true;
-			this.linkLabel3.Text = "linkLabel1";
-			this.linkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-			// 
-			// MainForm
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(673, 347);
-			this.Controls.Add(this.linkLabel3);
-			this.Controls.Add(this.button1);
-			this.Name = "MainForm";
-			this.Text = "rsc-win";
-			this.Load += new System.EventHandler(this.MainFormLoad);
-			this.ResumeLayout(false);
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            this.pic_ie9 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lab_google = new System.Windows.Forms.LinkLabel();
+            this.pan_firefox = new System.Windows.Forms.Panel();
+            this.pic_firefox = new System.Windows.Forms.PictureBox();
+            this.lab_firefox = new System.Windows.Forms.LinkLabel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pic_qq = new System.Windows.Forms.PictureBox();
+            this.lab_qq = new System.Windows.Forms.LinkLabel();
+            this.pan_ie9 = new System.Windows.Forms.Panel();
+            this.lab_ie9 = new System.Windows.Forms.LinkLabel();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ie9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pan_firefox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_firefox)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_qq)).BeginInit();
+            this.pan_ie9.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pic_ie9
+            // 
+            this.pic_ie9.BackColor = System.Drawing.Color.Transparent;
+            this.pic_ie9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_ie9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_ie9.Image = global::rsc_win.Properties.Resources.icon1;
+            this.pic_ie9.Location = new System.Drawing.Point(23, 21);
+            this.pic_ie9.Name = "pic_ie9";
+            this.pic_ie9.Size = new System.Drawing.Size(71, 69);
+            this.pic_ie9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_ie9.TabIndex = 3;
+            this.pic_ie9.TabStop = false;
+            this.pic_ie9.Click += new System.EventHandler(this.pic_ie9_Click);
+            // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.BackColor = System.Drawing.Color.Transparent;
+            this.btnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = global::rsc_win.Properties.Resources.按钮;
+            this.btnHome.Location = new System.Drawing.Point(252, 305);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(286, 86);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.TabIndex = 6;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer1.Name = "splitContainer1";
+            this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.BackgroundImage = global::rsc_win.Properties.Resources.背景;
+            this.splitContainer1.Panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel1.Controls.Add(this.btnHome);
+            this.splitContainer1.Panel1MinSize = 324;
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel2.Controls.Add(this.panel4);
+            this.splitContainer1.Panel2.Controls.Add(this.pan_firefox);
+            this.splitContainer1.Panel2.Controls.Add(this.panel2);
+            this.splitContainer1.Panel2.Controls.Add(this.pan_ie9);
+            this.splitContainer1.Panel2MinSize = 140;
+            this.splitContainer1.Size = new System.Drawing.Size(784, 564);
+            this.splitContainer1.SplitterDistance = 420;
+            this.splitContainer1.SplitterWidth = 1;
+            this.splitContainer1.TabIndex = 7;
+            this.splitContainer1.TabStop = false;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.pictureBox4);
+            this.panel4.Controls.Add(this.lab_google);
+            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel4.Location = new System.Drawing.Point(582, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(120, 140);
+            this.panel4.TabIndex = 14;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox4.Image = global::rsc_win.Properties.Resources.icon4;
+            this.pictureBox4.Location = new System.Drawing.Point(24, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(71, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lab_google
+            // 
+            this.lab_google.AutoSize = true;
+            this.lab_google.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lab_google.ForeColor = System.Drawing.Color.Black;
+            this.lab_google.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lab_google.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lab_google.Location = new System.Drawing.Point(11, 99);
+            this.lab_google.Name = "lab_google";
+            this.lab_google.Size = new System.Drawing.Size(98, 14);
+            this.lab_google.TabIndex = 4;
+            this.lab_google.TabStop = true;
+            this.lab_google.Text = "下载IE9浏览器";
+            this.lab_google.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pan_firefox
+            // 
+            this.pan_firefox.Controls.Add(this.pic_firefox);
+            this.pan_firefox.Controls.Add(this.lab_firefox);
+            this.pan_firefox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pan_firefox.Location = new System.Drawing.Point(416, 3);
+            this.pan_firefox.Name = "pan_firefox";
+            this.pan_firefox.Size = new System.Drawing.Size(120, 140);
+            this.pan_firefox.TabIndex = 13;
+            // 
+            // pic_firefox
+            // 
+            this.pic_firefox.BackColor = System.Drawing.Color.Transparent;
+            this.pic_firefox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_firefox.Image = global::rsc_win.Properties.Resources.icon3;
+            this.pic_firefox.Location = new System.Drawing.Point(25, 21);
+            this.pic_firefox.Name = "pic_firefox";
+            this.pic_firefox.Size = new System.Drawing.Size(71, 69);
+            this.pic_firefox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_firefox.TabIndex = 3;
+            this.pic_firefox.TabStop = false;
+            // 
+            // lab_firefox
+            // 
+            this.lab_firefox.AutoSize = true;
+            this.lab_firefox.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lab_firefox.ForeColor = System.Drawing.Color.Black;
+            this.lab_firefox.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lab_firefox.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lab_firefox.Location = new System.Drawing.Point(12, 99);
+            this.lab_firefox.Name = "lab_firefox";
+            this.lab_firefox.Size = new System.Drawing.Size(98, 14);
+            this.lab_firefox.TabIndex = 4;
+            this.lab_firefox.TabStop = true;
+            this.lab_firefox.Text = "下载IE9浏览器";
+            this.lab_firefox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.pic_qq);
+            this.panel2.Controls.Add(this.lab_qq);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(250, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(120, 140);
+            this.panel2.TabIndex = 12;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            this.panel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseClick);
+            // 
+            // pic_qq
+            // 
+            this.pic_qq.BackColor = System.Drawing.Color.Transparent;
+            this.pic_qq.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_qq.Image = global::rsc_win.Properties.Resources.icon2;
+            this.pic_qq.Location = new System.Drawing.Point(26, 21);
+            this.pic_qq.Name = "pic_qq";
+            this.pic_qq.Size = new System.Drawing.Size(71, 69);
+            this.pic_qq.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_qq.TabIndex = 3;
+            this.pic_qq.TabStop = false;
+            // 
+            // lab_qq
+            // 
+            this.lab_qq.AutoSize = true;
+            this.lab_qq.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lab_qq.ForeColor = System.Drawing.Color.Black;
+            this.lab_qq.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lab_qq.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lab_qq.Location = new System.Drawing.Point(13, 99);
+            this.lab_qq.Name = "lab_qq";
+            this.lab_qq.Size = new System.Drawing.Size(91, 14);
+            this.lab_qq.TabIndex = 4;
+            this.lab_qq.TabStop = true;
+            this.lab_qq.Text = "下载QQ浏览器";
+            this.lab_qq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // pan_ie9
+            // 
+            this.pan_ie9.Controls.Add(this.pic_ie9);
+            this.pan_ie9.Controls.Add(this.lab_ie9);
+            this.pan_ie9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pan_ie9.Location = new System.Drawing.Point(84, 3);
+            this.pan_ie9.Name = "pan_ie9";
+            this.pan_ie9.Size = new System.Drawing.Size(120, 140);
+            this.pan_ie9.TabIndex = 11;
+            this.pan_ie9.Paint += new System.Windows.Forms.PaintEventHandler(this.pan_ie9_Paint);
+            // 
+            // lab_ie9
+            // 
+            this.lab_ie9.AutoSize = true;
+            this.lab_ie9.Font = new System.Drawing.Font("宋体", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(134)));
+            this.lab_ie9.ForeColor = System.Drawing.Color.Black;
+            this.lab_ie9.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline;
+            this.lab_ie9.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(56)))), ((int)(((byte)(56)))));
+            this.lab_ie9.Location = new System.Drawing.Point(9, 99);
+            this.lab_ie9.Name = "lab_ie9";
+            this.lab_ie9.Size = new System.Drawing.Size(98, 14);
+            this.lab_ie9.TabIndex = 4;
+            this.lab_ie9.TabStop = true;
+            this.lab_ie9.Text = "下载IE9浏览器";
+            this.lab_ie9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lab_ie9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lab_ie9_LinkClicked);
+            // 
+            // MainForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ClientSize = new System.Drawing.Size(784, 564);
+            this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(800, 600);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "日升昌记";
+            this.TransparencyKey = System.Drawing.SystemColors.Desktop;
+            this.Load += new System.EventHandler(this.MainFormLoad);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ie9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pan_firefox.ResumeLayout(false);
+            this.pan_firefox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_firefox)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_qq)).EndInit();
+            this.pan_ie9.ResumeLayout(false);
+            this.pan_ie9.PerformLayout();
+            this.ResumeLayout(false);
 
 		}
-	}
+        private System.Windows.Forms.PictureBox pic_ie9;
+        private System.Windows.Forms.PictureBox btnHome;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.LinkLabel lab_ie9;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.LinkLabel lab_google;
+        private System.Windows.Forms.Panel pan_firefox;
+        private System.Windows.Forms.PictureBox pic_firefox;
+        private System.Windows.Forms.LinkLabel lab_firefox;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pic_qq;
+        private System.Windows.Forms.LinkLabel lab_qq;
+        private System.Windows.Forms.Panel pan_ie9;
+    }
 }
