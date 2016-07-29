@@ -1,9 +1,0 @@
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Debug\rsc-win.csprojResolveAssemblyReference.cache
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Debug\rsc_win.MainForm.resources
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Debug\rsc-win.csproj.GenerateResource.Cache
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Debug\rsc_win.Properties.Resources.resources
-E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Debug\日升昌记.exe.config
-E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Debug\日升昌记.exe
-E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Debug\日升昌记.pdb
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Debug\日升昌记.exe
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Debug\日升昌记.pdb
