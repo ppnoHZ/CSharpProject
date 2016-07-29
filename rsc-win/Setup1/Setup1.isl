@@ -52,7 +52,7 @@
 	<summary>
 		<codepage>1252</codepage>
 		<title>Installation Database</title>
-		<subject>rsc</subject>
+		<subject></subject>
 		<author>##ID_STRING2##</author>
 		<keywords>Installer,MSI,Database</keywords>
 		<comments>Contact:  Your local administrator</comments>
@@ -341,9 +341,9 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
+		<row><td>Component.exe</td><td>{3F24E95A-D41F-471C-98C7-E425B123AE6E}</td><td>INSTALLDIR</td><td>2</td><td/><td>File.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{4B6B09DF-6C14-4320-9684-8FD58286D0A1}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{5F9F1C3F-9D38-46BA-BBEE-1D5CFA32059F}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>rsc_win.exe</td><td>{E0D00AB8-B5A2-4638-A217-BB107AD0F722}</td><td>INSTALLDIR</td><td>2</td><td/><td>rsc_win.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -944,7 +944,7 @@
 		<row><td>LicenseAgreement</td><td>Back</td><td>NewDialog</td><td>InstallWelcome</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>LicenseAgreement</td><td>ISPrintButton</td><td>DoAction</td><td>ISPrint</td><td>1</td><td>0</td></row>
-		<row><td>LicenseAgreement</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>AgreeToLicense = "Yes"</td><td>0</td></row>
+		<row><td>LicenseAgreement</td><td>Next</td><td>NewDialog</td><td>ReadyToInstall</td><td>AgreeToLicense = "Yes"</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Back</td><td>NewDialog</td><td>MaintenanceWelcome</td><td>1</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>MaintenanceType</td><td>Next</td><td>NewDialog</td><td>CustomSetup</td><td>_IsMaintenance = "Change"</td><td>12</td></row>
@@ -975,7 +975,7 @@
 		<row><td>ReadmeInformation</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>1</td></row>
 		<row><td>ReadmeInformation</td><td>Next</td><td>NewDialog</td><td>CustomerInformation</td><td>1</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomSetup</td><td>Installed OR _IsSetupTypeMin = "Custom"</td><td>2</td></row>
-		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>CustomerInformation</td><td>NOT Installed</td><td>1</td></row>
+		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>LicenseAgreement</td><td>NOT Installed</td><td>1</td></row>
 		<row><td>ReadyToInstall</td><td>Back</td><td>NewDialog</td><td>MaintenanceType</td><td>Installed AND _IsMaintenance = "Reinstall"</td><td>3</td></row>
 		<row><td>ReadyToInstall</td><td>Cancel</td><td>SpawnDialog</td><td>CancelSetup</td><td>1</td><td>0</td></row>
 		<row><td>ReadyToInstall</td><td>InstallNow</td><td>EndDialog</td><td>Return</td><td>OutOfNoRbDiskSpace &lt;&gt; 1</td><td>0</td></row>
@@ -1052,9 +1052,9 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>INSTALLDIR</td><td>Component.exe</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
-		<row><td>INSTALLDIR</td><td>rsc_win.exe</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1140,7 +1140,6 @@
 		<row><td>CommonFiles64Folder</td><td>TARGETDIR</td><td>.:Common64</td><td/><td>0</td><td/></row>
 		<row><td>CommonFilesFolder</td><td>TARGETDIR</td><td>.:Common</td><td/><td>0</td><td/></row>
 		<row><td>DATABASEDIR</td><td>ISYourDataBaseDir</td><td>.</td><td/><td>0</td><td/></row>
-		<row><td>DIRECTORY</td><td>ProgramFilesFolder</td><td>北京日升昌集~1|北京日升昌集互联科技有限公司</td><td/><td>0</td><td/></row>
 		<row><td>DesktopFolder</td><td>TARGETDIR</td><td>.:Desktop</td><td/><td>3</td><td/></row>
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
@@ -1162,8 +1161,7 @@
 		<row><td>ProgramFilesFolder</td><td>TARGETDIR</td><td>.:PROGRA~1|program files</td><td/><td>0</td><td/></row>
 		<row><td>ProgramMenuFolder</td><td>TARGETDIR</td><td>.:Programs</td><td/><td>3</td><td/></row>
 		<row><td>RSC</td><td>MICROSOFT</td><td>rsc</td><td/><td>0</td><td/></row>
-		<row><td>RSC1</td><td>DIRECTORY</td><td>rsc</td><td/><td>0</td><td/></row>
-		<row><td>RSC2</td><td>ProgramFilesFolder</td><td>rsc</td><td/><td>0</td><td/></row>
+		<row><td>RSC2</td><td>ProgramFilesFolder</td><td>北京日升昌记~1|北京日升昌记互联科技有限公司</td><td/><td>0</td><td/></row>
 		<row><td>RecentFolder</td><td>TARGETDIR</td><td>.:Recent</td><td/><td>0</td><td/></row>
 		<row><td>SendToFolder</td><td>TARGETDIR</td><td>.:SendTo</td><td/><td>3</td><td/></row>
 		<row><td>StartMenuFolder</td><td>TARGETDIR</td><td>.:STARTM~1|Start Menu</td><td/><td>3</td><td/></row>
@@ -1177,8 +1175,7 @@
 		<row><td>USERPROFILE</td><td>TARGETDIR</td><td>.:USERPR~1|UserProfile</td><td/><td>0</td><td/></row>
 		<row><td>WindowsFolder</td><td>TARGETDIR</td><td>.:Windows</td><td/><td>0</td><td/></row>
 		<row><td>WindowsVolume</td><td>TARGETDIR</td><td>.:WinRoot</td><td/><td>0</td><td/></row>
-		<row><td>company_name</td><td>ProgramMenuFolder</td><td>北京日升昌集互联科技有限公司</td><td/><td>1</td><td/></row>
-		<row><td>rsc</td><td>company_name</td><td>rsc</td><td/><td>1</td><td/></row>
+		<row><td>directory1</td><td>ProgramMenuFolder</td><td>北京日升昌记互联科技有限公司</td><td/><td>1</td><td/></row>
 	</table>
 
 	<table name="DrLocator">
@@ -1871,9 +1868,9 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>Component.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
-		<row><td>AlwaysInstall</td><td>rsc_win.exe</td></row>
 	</table>
 
 	<table name="File">
@@ -1888,8 +1885,8 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>rsc_win.exe</td><td>rsc_win.exe</td><td>rsc-win.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Debug\rsc-win.exe</td><td>1</td><td/></row>
-		<row><td>rsc_win.exe.config</td><td>ISX_DEFAULTCOMPONENT</td><td>rsc-win.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Debug\rsc-win.exe.config</td><td>1</td><td/></row>
+		<row><td>File.config</td><td>ISX_DEFAULTCOMPONENT</td><td>日升昌记.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe.config</td><td>1</td><td/></row>
+		<row><td>File.exe</td><td>Component.exe</td><td>日升昌记.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2034,9 +2031,9 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
+		<row><td>Component.exe</td><td/><td/><td>_11A57FDD_7DE6_41DD_90DD_4435E5D04B7B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_A57A085A_7321_48E2_AD21_EDF248586BF9_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_5B4419B0_1253_471D_A3BF_74DB09EFF23D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>rsc_win.exe</td><td/><td/><td>_EAA48C3F_1B94_43FE_8FD9_832C503A2440_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2592,7 +2589,6 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
-		<row><td>_3AE0D166_186E_4177_9B6F_D6599ACDAD73_</td><td>Microsoft .NET Framework 4.0 Full (Web Download).prq</td><td/><td/><td/></row>
 		<row><td>_8F45D668_9139_4350_90E0_6C77148E0524_</td><td>Microsoft .NET Framework 4.0 Full.prq</td><td/><td/><td/></row>
 	</table>
 
@@ -2627,7 +2623,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>2052</td><td>北京日升昌集互联科技有限公司</td><td>0</td><td/><td>-341560918</td></row>
+		<row><td>COMPANY_NAME</td><td>2052</td><td>北京日升昌记互联科技有限公司</td><td>0</td><td/><td>-341562481</td></row>
 		<row><td>DN_AlwaysInstall</td><td>2052</td><td>始终安装</td><td>0</td><td/><td>-341565046</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>2052</td><td>系统颜色设置不足以运行 [ProductName]。</td><td>0</td><td/><td>-341565046</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_DOTNETVERSION40CLIENT</td><td>1033</td><td>Microsoft .NET Framework 4.0 Client Package or greater needs to be installed for this installation to continue.</td><td>0</td><td/><td>-341524054</td></row>
@@ -3736,11 +3732,19 @@
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>2052</td><td>对于运行 [ProductName] 内存量不足。</td><td>0</td><td/><td>-341565046</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>2052</td><td>对于运行 [ProductName] 屏幕分辨率不足。</td><td>0</td><td/><td>-341565046</td></row>
 		<row><td>ID_STRING1</td><td>2052</td><td>http://www.rsc365.com</td><td>0</td><td/><td>-341565046</td></row>
-		<row><td>ID_STRING2</td><td>2052</td><td>北京日升昌集互联科技有限公司</td><td>0</td><td/><td>-341565046</td></row>
+		<row><td>ID_STRING2</td><td>2052</td><td>北京日升昌记互联科技有限公司</td><td>0</td><td/><td>-341566577</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Launch rsc-win.exe</td><td>0</td><td/><td>-341542326</td></row>
 		<row><td>ID_STRING3</td><td>2052</td><td>Launch rsc-win.exe</td><td>0</td><td/><td>-341542326</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td/><td>0</td><td/><td>-341538198</td></row>
 		<row><td>ID_STRING4</td><td>2052</td><td/><td>0</td><td/><td>-341538198</td></row>
+		<row><td>ID_STRING5</td><td>1033</td><td>NewShortcut3</td><td>0</td><td/><td>-341541617</td></row>
+		<row><td>ID_STRING5</td><td>2052</td><td>日升昌记</td><td>0</td><td/><td>-341529329</td></row>
+		<row><td>ID_STRING6</td><td>1033</td><td>日升昌记</td><td>0</td><td/><td>-341547601</td></row>
+		<row><td>ID_STRING6</td><td>2052</td><td>日升昌记</td><td>0</td><td/><td>-341547601</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>日升昌记</td><td>0</td><td/><td>-341545553</td></row>
+		<row><td>ID_STRING7</td><td>2052</td><td>日升昌记</td><td>0</td><td/><td>-341545553</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>NewShortcut1</td><td>0</td><td/><td>-341553936</td></row>
+		<row><td>ID_STRING8</td><td>2052</td><td>Uninstall</td><td>0</td><td/><td>-341553936</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>2052</td><td>系统将不安装此功能。</td><td>0</td><td/><td>-341565046</td></row>
 	</table>
 
@@ -3854,9 +3858,10 @@
 		<col def="V0">Data</col>
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
-		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\setupicon.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_r_828CF39020234522AFD4343F79F31209.exe</td><td/><td>D:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
-		<row><td>UNINST_Uninstall_r_FE756B72C92C4037A31AC16095625731.exe</td><td/><td>D:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\rsc-win\bin\Release\日升昌记.exe</td><td>0</td></row>
+		<row><td>NewShortcut1_C319220F6CF5457EBEDCB39C73A72FD5.exe</td><td/><td>D:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
+		<row><td>NewShortcut31_E556CEC3AE4641BE8DC08B723C223F32.exe</td><td/><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe</td><td>0</td></row>
+		<row><td>NewShortcut3_BDDE6C8D8DD3454B96772D5C8DDCD67C.exe</td><td/><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe</td><td>0</td></row>
 		<row><td>rsc_win.exe1_E1BE79F9DCA24252955E3601AF9FEC28.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>rsc_win.exe_990B167DBBA745F2B1972743955ACE25.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 	</table>
@@ -3991,7 +3996,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{FE4CEEEC-A765-46D1-BB01-81EB2D363DED}</td></row>
 		<row><td>ISUSSignature</td><td>{F8545B79-BAA7-4357-95B4-267499579EC7}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewProject,viewSystemSearch,viewUI,viewAppFiles,viewTextMessages,viewObjects,viewRelease</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewProject,viewSystemSearch,viewUI,viewAppFiles,viewTextMessages,viewObjects,viewRelease,viewUpgradePaths,viewUpdateService,viewShortcuts,viewRegistry,viewIniFiles,viewFileExtensions,viewEnvironmentVariables,viewVRoots,viewServices,viewCustomActions</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4365,8 +4370,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{74DF86B6-B611-4F33-A3D3-A54014ED8342}</td><td/></row>
-		<row><td>ProductName</td><td>rsc</td><td/></row>
+		<row><td>ProductCode</td><td>{F76E7866-CDF9-4C64-BB1D-5D80F9078E74}</td><td/></row>
+		<row><td>ProductName</td><td>日升昌记</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
@@ -4382,7 +4387,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>SecureCustomProperties</td><td>ISFOUNDNEWERPRODUCTVERSION;USERNAME;COMPANYNAME;ISX_SERIALNUM;SUPPORTDIR;IE9FOUND;DOTNETVERSION40FULL</td><td/></row>
 		<row><td>SelectedSetupType</td><td>##IDS__DisplayName_Typical##</td><td/></row>
 		<row><td>SetupType</td><td>Typical</td><td/></row>
-		<row><td>UpgradeCode</td><td>{92A02DD6-90D6-4824-8F73-031C18271C9C}</td><td/></row>
+		<row><td>UpgradeCode</td><td>{950A916A-3D56-42A3-BAE5-3484926B75C0}</td><td/></row>
 		<row><td>_IsMaintenance</td><td>Change</td><td/></row>
 		<row><td>_IsSetupTypeMin</td><td>Typical</td><td/></row>
 	</table>
@@ -4443,10 +4448,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="L255">FileName</col>
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
-		<row><td>FileKey1</td><td>rsc_win.exe</td><td/><td>company_name</td><td>2</td></row>
-		<row><td>FileKey2</td><td>rsc_win.exe</td><td/><td>rsc</td><td>2</td></row>
-		<row><td>UNINST_Uninstall_rsc</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>rsc</td><td>2</td></row>
-		<row><td>rsc_win.exe</td><td>rsc_win.exe</td><td/><td>rsc</td><td>2</td></row>
+		<row><td>NewShortcut1</td><td>ISX_DEFAULTCOMPONENT</td><td/><td>directory1</td><td>2</td></row>
+		<row><td>NewShortcut31</td><td>Component.exe</td><td/><td>directory1</td><td>2</td></row>
 	</table>
 
 	<table name="RemoveIniFile">
@@ -4532,10 +4535,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>UNINST_Uninstall_rsc</td><td>rsc</td><td>UNINST|Uninstall rsc</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {74DF86B6-B611-4F33-A3D3-A54014ED8342}</td><td/><td/><td>UNINST_Uninstall_r_FE756B72C92C4037A31AC16095625731.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>UNINST_Uninstall_rsc1</td><td>DesktopFolder</td><td>UNINST|Uninstall rsc</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {74DF86B6-B611-4F33-A3D3-A54014ED8342}</td><td/><td/><td>UNINST_Uninstall_r_828CF39020234522AFD4343F79F31209.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>rsc_win.exe</td><td>rsc</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>rsc_win.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>rsc_win.exe_990B167DBBA745F2B1972743955ACE25.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>rsc_win.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME1##</td><td>rsc_win.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>rsc_win.exe1_E1BE79F9DCA24252955E3601AF9FEC28.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut1</td><td>directory1</td><td>##ID_STRING8##</td><td>ISX_DEFAULTCOMPONENT</td><td>[SystemFolder]MsiExec.exe</td><td>/x [ProductCode]</td><td/><td/><td>NewShortcut1_C319220F6CF5457EBEDCB39C73A72FD5.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut3</td><td>DesktopFolder</td><td>##ID_STRING5##</td><td>Component.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut3_BDDE6C8D8DD3454B96772D5C8DDCD67C.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>NewShortcut31</td><td>directory1</td><td>##ID_STRING6##</td><td>Component.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>NewShortcut31_E556CEC3AE4641BE8DC08B723C223F32.exe</td><td>1</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="Signature">

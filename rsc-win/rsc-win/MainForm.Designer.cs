@@ -35,8 +35,8 @@ namespace rsc_win
             this.pic_ie9 = new System.Windows.Forms.PictureBox();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pan_google = new System.Windows.Forms.Panel();
+            this.pic_google = new System.Windows.Forms.PictureBox();
             this.lab_google = new System.Windows.Forms.LinkLabel();
             this.pan_firefox = new System.Windows.Forms.Panel();
             this.pic_firefox = new System.Windows.Forms.PictureBox();
@@ -52,8 +52,8 @@ namespace rsc_win
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.pan_google.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_google)).BeginInit();
             this.pan_firefox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_firefox)).BeginInit();
             this.panel2.SuspendLayout();
@@ -109,7 +109,7 @@ namespace rsc_win
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
-            this.splitContainer1.Panel2.Controls.Add(this.panel4);
+            this.splitContainer1.Panel2.Controls.Add(this.pan_google);
             this.splitContainer1.Panel2.Controls.Add(this.pan_firefox);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
             this.splitContainer1.Panel2.Controls.Add(this.pan_ie9);
@@ -120,27 +120,27 @@ namespace rsc_win
             this.splitContainer1.TabIndex = 7;
             this.splitContainer1.TabStop = false;
             // 
-            // panel4
+            // pan_google
             // 
-            this.panel4.Controls.Add(this.pictureBox4);
-            this.panel4.Controls.Add(this.lab_google);
-            this.panel4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.panel4.Location = new System.Drawing.Point(582, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(120, 140);
-            this.panel4.TabIndex = 14;
+            this.pan_google.Controls.Add(this.pic_google);
+            this.pan_google.Controls.Add(this.lab_google);
+            this.pan_google.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pan_google.Location = new System.Drawing.Point(582, 3);
+            this.pan_google.Name = "pan_google";
+            this.pan_google.Size = new System.Drawing.Size(120, 140);
+            this.pan_google.TabIndex = 14;
             // 
-            // pictureBox4
+            // pic_google
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox4.Image = global::rsc_win.Properties.Resources.icon4;
-            this.pictureBox4.Location = new System.Drawing.Point(24, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(71, 69);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.pic_google.BackColor = System.Drawing.Color.Transparent;
+            this.pic_google.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pic_google.Image = global::rsc_win.Properties.Resources.icon4;
+            this.pic_google.Location = new System.Drawing.Point(24, 21);
+            this.pic_google.Name = "pic_google";
+            this.pic_google.Size = new System.Drawing.Size(71, 69);
+            this.pic_google.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pic_google.TabIndex = 3;
+            this.pic_google.TabStop = false;
             // 
             // lab_google
             // 
@@ -282,9 +282,9 @@ namespace rsc_win
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.pan_google.ResumeLayout(false);
+            this.pan_google.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_google)).EndInit();
             this.pan_firefox.ResumeLayout(false);
             this.pan_firefox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_firefox)).EndInit();
@@ -300,8 +300,8 @@ namespace rsc_win
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.LinkLabel lab_ie9;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel pan_google;
+        private System.Windows.Forms.PictureBox pic_google;
         private System.Windows.Forms.LinkLabel lab_google;
         private System.Windows.Forms.Panel pan_firefox;
         private System.Windows.Forms.PictureBox pic_firefox;

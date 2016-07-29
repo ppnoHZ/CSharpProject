@@ -65,6 +65,12 @@ namespace rsc_win
             string[] ctr_types = new string[] { "pan_", "lab_", "pic_" };
             string[] names = new string[] { "ie9", "qq", "firefox", "google" };
 
+            homeUrl = System.Configuration.ConfigurationManager.AppSettings["homeUrl"];
+            if(string.IsNullOrEmpty(homeUrl))
+            {
+                homeUrl = "http://www.rsc365.com";
+            }
+
             foreach (string sfirst in ctr_types)
             {
                 foreach (string item in names)

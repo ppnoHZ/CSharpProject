@@ -1,5 +1,6 @@
-E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\rsc-win.exe.config
-E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\rsc-win.exe
+E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe.config
+E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe
 E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Release\rsc_win.MainForm.resources
+E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Release\rsc_win.Properties.Resources.resources
 E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Release\rsc-win.csproj.GenerateResource.Cache
-E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Release\rsc-win.exe
+E:\rsc\CsharpProject\rsc-win\rsc-win\obj\Release\日升昌记.exe
