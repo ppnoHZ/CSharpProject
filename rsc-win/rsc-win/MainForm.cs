@@ -9,6 +9,7 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 
 namespace rsc_win
@@ -35,6 +36,14 @@ namespace rsc_win
         {
 
             init();
+            Open(homeUrl);
+
+            string homeImg = Application.StartupPath + "\\img\\home.png";
+
+            if (File.Exists(homeImg))
+            {
+                this.splitContainer1.Panel1.BackgroundImage = Bitmap.FromFile(homeImg);
+            }
 
         }
 
@@ -52,7 +61,8 @@ namespace rsc_win
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(homeUrl);
+            Application.Exit();
+            //System.Diagnostics.Process.Start(homeUrl);
         }
         void Open(string url)
         {
@@ -66,7 +76,7 @@ namespace rsc_win
             string[] names = new string[] { "ie9", "qq", "firefox", "google" };
 
             homeUrl = System.Configuration.ConfigurationManager.AppSettings["homeUrl"];
-            if(string.IsNullOrEmpty(homeUrl))
+            if (string.IsNullOrEmpty(homeUrl))
             {
                 homeUrl = "http://www.rsc365.com";
             }
@@ -75,8 +85,8 @@ namespace rsc_win
             {
                 foreach (string item in names)
                 {
-                    Control[] controls= this.Controls.Find(sfirst + item, true);
-                    if(controls.Length<=0)
+                    Control[] controls = this.Controls.Find(sfirst + item, true);
+                    if (controls.Length <= 0)
                     {
                         continue;
                     }
@@ -116,7 +126,7 @@ namespace rsc_win
 
         private void panel2_Click(object sender, EventArgs e)
         {
-    
+
         }
 
         private void panel2_MouseClick(object sender, MouseEventArgs e)
