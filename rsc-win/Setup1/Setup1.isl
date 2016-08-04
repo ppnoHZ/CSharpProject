@@ -343,6 +343,7 @@
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>Component.exe</td><td>{3F24E95A-D41F-471C-98C7-E425B123AE6E}</td><td>INSTALLDIR</td><td>2</td><td/><td>File.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{4B6B09DF-6C14-4320-9684-8FD58286D0A1}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td>{65F64FC8-8BC0-4BAE-9273-F3F1EB33AF9A}</td><td>IMG</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{5F9F1C3F-9D38-46BA-BBEE-1D5CFA32059F}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1052,8 +1053,10 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>IMG</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>Component.exe</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
 	</table>
 
@@ -1144,6 +1147,7 @@
 		<row><td>FavoritesFolder</td><td>TARGETDIR</td><td>.:FAVORI~1|Favorites</td><td/><td>0</td><td/></row>
 		<row><td>FontsFolder</td><td>TARGETDIR</td><td>.:Fonts</td><td/><td>0</td><td/></row>
 		<row><td>GlobalAssemblyCache</td><td>TARGETDIR</td><td>.:Global~1|GlobalAssemblyCache</td><td/><td>0</td><td/></row>
+		<row><td>IMG</td><td>INSTALLDIR</td><td>img</td><td/><td>0</td><td/></row>
 		<row><td>INSTALLDIR</td><td>RSC2</td><td>.</td><td/><td>0</td><td/></row>
 		<row><td>ISCommonFilesFolder</td><td>CommonFilesFolder</td><td>Instal~1|InstallShield</td><td/><td>0</td><td/></row>
 		<row><td>ISMyCompanyDir</td><td>ProgramFilesFolder</td><td>MYCOMP~1|My Company Name</td><td/><td>0</td><td/></row>
@@ -1870,6 +1874,7 @@
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>Component.exe</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
+		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT1</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
 	</table>
 
@@ -1887,6 +1892,7 @@
 		<col def="S72">ISComponentSubFolder_</col>
 		<row><td>File.config</td><td>ISX_DEFAULTCOMPONENT</td><td>日升昌记.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe.config</td><td>1</td><td/></row>
 		<row><td>File.exe</td><td>Component.exe</td><td>日升昌记.exe</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Release\日升昌记.exe</td><td>1</td><td/></row>
+		<row><td>home.png1</td><td>ISX_DEFAULTCOMPONENT1</td><td>home.png</td><td>0</td><td/><td/><td/><td>1</td><td>E:\rsc\CsharpProject\rsc-win\rsc-win\bin\Debug\img\home.png</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2033,6 +2039,7 @@
 		<col def="S0">Miscellaneous</col>
 		<row><td>Component.exe</td><td/><td/><td>_11A57FDD_7DE6_41DD_90DD_4435E5D04B7B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_A57A085A_7321_48E2_AD21_EDF248586BF9_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>ISX_DEFAULTCOMPONENT1</td><td/><td/><td>_F8D5FB6B_1F6A_4240_86A1_1AE217A4FD19_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_5B4419B0_1253_471D_A3BF_74DB09EFF23D_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -4370,7 +4377,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{F76E7866-CDF9-4C64-BB1D-5D80F9078E74}</td><td/></row>
+		<row><td>ProductCode</td><td>{191924A8-046D-4B38-8C4C-4F0735429BBB}</td><td/></row>
 		<row><td>ProductName</td><td>日升昌记</td><td/></row>
 		<row><td>ProductVersion</td><td>1.00.0000</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>

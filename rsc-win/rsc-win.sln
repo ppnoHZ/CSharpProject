@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rsc-win", "rsc-win\rsc-win.
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Setup1", "Setup1\Setup1.isproj", "{0F953C17-6104-454A-B2B6-4B0426392B1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "winTest", "winTest\winTest.csproj", "{DE7F3AC6-122C-4792-8312-06A6652BC81A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CD_ROM|Any CPU = CD_ROM|Any CPU
@@ -36,6 +38,16 @@ Global
 		{0F953C17-6104-454A-B2B6-4B0426392B1C}.Release|Any CPU.Build.0 = SingleImage
 		{0F953C17-6104-454A-B2B6-4B0426392B1C}.SingleImage|Any CPU.ActiveCfg = SingleImage
 		{0F953C17-6104-454A-B2B6-4B0426392B1C}.SingleImage|Any CPU.Build.0 = SingleImage
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{DE7F3AC6-122C-4792-8312-06A6652BC81A}.SingleImage|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
